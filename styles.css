@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
+
+h1 {
+    animation: glow 10s ease-in-out infinite;
+    animation: none;
+    -webkit-text-stroke: 1px #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0a;
+    overflow: hidden;
+    text-align: center;
+}
+
+figure {
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+h1 {
+    display: block;
+    width: 100%;
+    padding: 40px;
+    line-height: 1.5;
+    font: 900 8em 'Concert One', sans-serif;
+    position: absolute;
+    color: #0a0a0a;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 30px red;
+    }
+
+    25% {
+        text-shadow: 0 0 30px orange;
+    }
+
+    50% {
+        text-shadow: 0 0 30px forestgreen;
+    }
+
+    75% {
+        text-shadow: 0 0 30px cyan;
+    }
+}
