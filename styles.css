@@ -26,6 +26,6 @@ body {
 /* Ensure ripples canvas is properly positioned */
 .hero canvas {
     position: absolute;
-    top: 0;
+    top: -250px;
     left: 0;
 }
