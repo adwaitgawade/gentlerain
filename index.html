@@ -11,7 +11,7 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <figure id="title-container">
+        <figure id="title-con">
             <div id="title">
                 <svg width="1440" height="400" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -47,8 +47,6 @@
                 </svg>
             </div>
         </figure>
-
-
     </section>
 
     <!-- jQuery (required for ripples.js) -->
@@ -66,8 +64,9 @@
             try {
                 $('.hero').ripples({
                     resolution: 512,
-                    dropRadius: 20,
-                    perturbance: 0.04
+                    dropRadius: 40,
+                    perturbance: 0.04,
+
                 });
             } catch (e) {
                 console.error('Ripples effect not supported:', e);

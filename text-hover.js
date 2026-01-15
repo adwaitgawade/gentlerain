@@ -1,16 +1,16 @@
 // Mouse-based 3D perspective effect for text
 document.addEventListener('DOMContentLoaded', function () {
     const figure = document.getElementById('title-container');
-    const h1 = document.getElementById('title');
+    const hero = document.querySelector('.hero');
 
-    if (!figure || !h1) return;
+    if (!figure || !hero) return;
 
-    // Add mousemove event listener to the h1 element
-    h1.addEventListener('mousemove', function (e) {
-        // Get the bounding rectangle of the h1 element
-        const rect = h1.getBoundingClientRect();
+    // Add mousemove event listener to the hero section
+    hero.addEventListener('mousemove', function (e) {
+        // Get the bounding rectangle of the hero section
+        const rect = hero.getBoundingClientRect();
 
-        // Calculate mouse position relative to the h1 element (0 to 1)
+        // Calculate mouse position relative to the hero section (0 to 1)
         const x = (e.clientX - rect.left) / rect.width;  // 0 (left) to 1 (right)
         const y = (e.clientY - rect.top) / rect.height;   // 0 (top) to 1 (bottom)
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Reset to neutral position when mouse leaves
-    h1.addEventListener('mouseleave', function () {
+    hero.addEventListener('mouseleave', function () {
         figure.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
     });
 

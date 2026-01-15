@@ -1,11 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Concert+One);
 
-h1 {
-    animation: glow 10s ease-in-out infinite;
-    animation: none;
-    -webkit-text-stroke: 1px #fff;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -19,4 +13,19 @@ body {
 .hero {
     width: 100vw;
     height: 100vh;
+    position: relative;
+    background-image: url('hero-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure ripples canvas is properly positioned */
+.hero canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
