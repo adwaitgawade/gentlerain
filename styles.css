@@ -16,6 +16,15 @@ body {
     text-align: center;
 }
 
+.hero {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 figure {
     transform-origin: center center;
     transform-style: preserve-3d;
@@ -23,13 +32,8 @@ figure {
 }
 
 h1 {
-    display: block;
-    width: 100%;
-    padding: 40px;
-    line-height: 1.5;
-    font: 900 8em 'Concert One', sans-serif;
-    position: absolute;
-    color: #0a0a0a;
+    display: none;
+    /* Text is now part of the background image so it gets distorted by ripples */
 }
 
 @keyframes glow {
