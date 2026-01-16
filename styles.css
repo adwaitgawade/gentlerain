@@ -29,3 +29,126 @@ body {
     top: -250px;
     left: 0;
 }
+
+/* Navigation */
+.top-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.nav-left .brand {
+    font-family: 'Concert One', cursive;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-center {
+    display: flex;
+    gap: 60px;
+    margin-left: -100px;
+    /* Slight offset to better visually center relative to brand */
+}
+
+.nav-center a {
+    color: #ffdcb8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    padding: 5px 12px;
+}
+
+.nav-center a:hover {
+    background-color: #1a1a1a;
+    color: #ffdcb8;
+    padding: 5px 12px;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-right a {
+    color: #ffdcb8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    border: 1px solid #ffdcb8;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ffdcb8;
+    color: #e85d04;
+}
+
+/* Bottom CTA */
+.bottom-cta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 100;
+    color: #ffdcb8;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.cta-content h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: left;
+    margin: 0;
+    max-width: 600px;
+}
+
+.cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.btn-outline {
+    border: 1px solid #ffdcb8;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #ffdcb8;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-outline:hover {
+    background: #ffdcb8;
+    color: #e85d04;
+}
+
+.login-link {
+    color: #ffdcb8;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
