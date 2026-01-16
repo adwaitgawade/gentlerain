@@ -78,9 +78,9 @@
     </section>
 
     <!-- Practice Section -->
-    <section class="practice h-screen">
-        <div class="bg-[#f9f0d3] h-12 border border-black justify-items-start align-middle">
-            <h2 class="text-2xl font-bold pl-8 pt-2">Practice</h2>
+    <section class="practice h-screen relative z-10" data-scroll-container>
+        <div class="bg-[#f9f0d3] h-12 border border-black justify-items-start align-middle" data-scroll-section>
+            <h2 class="text-2xl font-bold pl-8 pt-2" data-scroll>Practice</h2>
         </div>
     </section>
 
@@ -95,6 +95,10 @@
 
     <!-- Initialize ripples effect -->
     <script>
+        (function () {
+            const locomotiveScroll = new LocomotiveScroll();
+        })();
+
         $(document).ready(function () {
             try {
                 $('.hero').ripples({
