@@ -15,7 +15,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1;
-    background-image: url('hero-background.png');
+    background-image: url('assets/hero-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
