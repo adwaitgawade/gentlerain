@@ -85,8 +85,8 @@
         </div>
 
         <!-- Background Video -->
-        <video class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 -z-10" autoplay muted loop
-            playsinline preload="auto">
+        <video id="practice-blob" class="absolute top-1/2 left-1/2 w-1/2 -z-10" autoplay muted loop playsinline
+            preload="auto">
             <source src="assets/blob_gradient_with_alpha-1.mov">
             <source src="assets/blob_gradient_with_alpha-1.mp4" type="video/mp4">
         </video>
@@ -136,6 +136,45 @@
                 });
             } catch (e) {
                 console.error('Ripples effect not supported:', e);
+            }
+
+            // Blob cursor follower logic
+            const practiceSection = document.querySelector('.practice');
+            const blob = document.getElementById('practice-blob');
+
+            if (practiceSection && blob) {
+                // Initialize GSAP settings for smooth movement
+                gsap.set(blob, { xPercent: -50, yPercent: -50 });
+
+                const xTo = gsap.quickTo(blob, "x", { duration: 0.6, ease: "power3" });
+                const yTo = gsap.quickTo(blob, "y", { duration: 0.6, ease: "power3" });
+
+                practiceSection.addEventListener('mousemove', (e) => {
+                    const rect = practiceSection.getBoundingClientRect();
+                    const relX = e.clientX - rect.left;
+                    const relY = e.clientY - rect.top;
+
+                    // Calculate center
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    // Calculate offset from center
+                    const deltaX = relX - centerX;
+                    const deltaY = relY - centerY;
+
+                    // Limit movement (bounds) - e.g., max 100px movement from center
+                    const limit = 100;
+                    const moveX = Math.max(Math.min(deltaX * 0.1, limit), -limit);
+                    const moveY = Math.max(Math.min(deltaY * 0.1, limit), -limit);
+
+                    xTo(moveX);
+                    yTo(moveY);
+                });
+
+                practiceSection.addEventListener('mouseleave', () => {
+                    xTo(0);
+                    yTo(0);
+                });
             }
         });
     </script>
