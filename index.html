@@ -80,14 +80,29 @@
     <!-- Practice Section -->
     <section class="practice h-screen relative z-10 bg-[#71aeb4]" data-scroll-container>
         <!-- Background video -->
-        <div class="bg-[#f9f0d3] h-12 border border-black justify-items-start align-middle" data-scroll-section>
-            <h2 class="text-2xl font-bold pl-8 pt-2" data-scroll>Practice</h2>
+        <div class="relative z-10">
+            <div class="bg-[#f9f0d3] h-12 border border-black justify-items-start align-middle" data-scroll-section>
+                <h2 class="text-2xl font-bold pl-8 pt-2" data-scroll>Practice</h2>
+            </div>
         </div>
-        <video class="absolute inset-0 w-full object-cover -z-10" autoplay muted loop playsinline preload="auto">
-            <source src="assets/blob_gradient_with_alpha-1.mov">
-            <source src="assets/blob_gradient_with_alpha-1.mp4" type="video/mp4">
-        </video>
-        <h1>Helllo World</h1>
+        <div class="flex justify-center">
+            <video class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto min-w-[50%] -z-10" autoplay
+                muted loop playsinline preload="auto">
+                <source src="assets/blob_gradient_with_alpha-1.mov">
+                <source src="assets/blob_gradient_with_alpha-1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="flex w-full h-full">
+            <div class="w-1/2 flex flex-col justify-center px-12">
+                <h2 class="text-left text-7xl font-bold text-[#f9f0d3] mb-6">Practice</h2>
+                <p class="text-left text-3xl font-medium text-[#f9f0d3]">
+                    Practice one scene at a time through the <br> immersive story of a fictional company
+                </p>
+            </div>
+            <div class="w-1/2 flex items-center justify-center h-full">
+                <img src="assets/practice.png" alt="practice image" class="object-contain max-w-full max-h-full">
+            </div>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
