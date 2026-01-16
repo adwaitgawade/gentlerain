@@ -5,44 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genlerain</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/bundled/locomotive-scroll.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/dist/locomotive-scroll.min.css">
 </head>
 
-<body class="flex flex-col">
+<body class="flex flex-col bg-[#0a0a0a] text-center">
     <!-- Hero Section -->
-    <section class="hero">
-        <nav class="top-nav">
+    <section
+        class="hero w-screen h-screen sticky top-0 z-[1] bg-[url('assets/hero-background.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center [&>canvas]:absolute [&>canvas]:top-0 [&>canvas]:left-0 [&>canvas]:w-full [&>canvas]:h-full">
+        <nav
+            class="top-nav absolute top-0 left-0 w-full px-10 py-5 flex justify-between items-center z-[100] font-['Helvetica_Neue',_Helvetica,_Arial,_sans-serif]">
             <div class="nav-left">
-                <a href="#" class="brand">gentlerain</a>
+                <a href="#" class="brand font-['Concert_One'] text-[1.2rem] text-white no-underline">gentlerain</a>
             </div>
-            <div class="nav-center">
-                <a href="#">Product</a>
-                <a href="#">Concept</a>
-                <a href="#" class="active">For business</a>
-                <a href="#">Partners</a>
+            <div class="nav-center flex gap-[60px] -ml-[100px]">
+                <a href="#"
+                    class="text-[#ffdcb8] no-underline text-[0.9rem] font-medium opacity-80 transition-opacity duration-200 px-3 py-[5px] hover:bg-[#1a1a1a] hover:opacity-100 hover:rounded-[4px]">Product</a>
+                <a href="#"
+                    class="text-[#ffdcb8] no-underline text-[0.9rem] font-medium opacity-80 transition-opacity duration-200 px-3 py-[5px] hover:bg-[#1a1a1a] hover:opacity-100 hover:rounded-[4px]">Concept</a>
+                <a href="#"
+                    class="active text-[#ffdcb8] no-underline text-[0.9rem] font-medium opacity-80 transition-opacity duration-200 px-3 py-[5px] hover:bg-[#1a1a1a] hover:opacity-100 hover:rounded-[4px]">For
+                    business</a>
+                <a href="#"
+                    class="text-[#ffdcb8] no-underline text-[0.9rem] font-medium opacity-80 transition-opacity duration-200 px-3 py-[5px] hover:bg-[#1a1a1a] hover:opacity-100 hover:rounded-[4px]">Partners</a>
             </div>
-            <div class="nav-right">
-                <a href="#">Sign Up</a>
-                <a href="#">Log in</a>
-                <a href="#" class="btn-primary">Try now</a>
+            <div class="nav-right flex items-center gap-10">
+                <a href="#" class="text-[#ffdcb8] no-underline text-[0.9rem] font-medium">Sign Up</a>
+                <a href="#" class="text-[#ffdcb8] no-underline text-[0.9rem] font-medium">Log in</a>
+                <a href="#"
+                    class="btn-primary border border-[#ffdcb8] px-[30px] py-[10px] rounded-[20px] transition-colors duration-300 hover:bg-[#ffdcb8] hover:text-[#e85d04] text-[#ffdcb8] no-underline text-[0.9rem] font-medium">Try
+                    now</a>
             </div>
         </nav>
-        <footer class="bottom-cta">
+        <footer
+            class="bottom-cta absolute bottom-0 left-0 w-full p-10 flex justify-between items-end z-[100] text-[#ffdcb8] font-['Helvetica_Neue',_Helvetica,_Arial,_sans-serif]">
             <div class="cta-content">
-                <h2>Leverage AI to grow valuable skills through<br>immersive realistic role play scenarios</h2>
+                <h2 class="text-[1.8rem] font-normal leading-[1.3] text-left m-0 max-w-[600px]">Leverage AI to grow
+                    valuable skills through<br>immersive realistic role play scenarios</h2>
             </div>
-            <div class="cta-actions">
-                <a href="#" class="btn-outline">Contact Sales</a>
-                <a href="#" class="login-link">Log In</a>
+            <div class="cta-actions flex items-center gap-10">
+                <a href="#"
+                    class="btn-outline border border-[#ffdcb8] px-[30px] py-3 rounded-[30px] text-[#ffdcb8] no-underline text-base transition-colors duration-300 hover:bg-[#ffdcb8] hover:text-[#e85d04]">Contact
+                    Sales</a>
+                <a href="#" class="login-link text-[#ffdcb8] no-underline text-base font-medium">Log In</a>
             </div>
         </footer>
     </section>
 
     <!-- Practice Section -->
-    <section class="practice h-screen relative z-10 bg-[#92b6bc]" data-scroll-section>
+    <section class="practice h-screen sticky top-0 z-10 bg-[#92b6bc]" data-scroll-section>
         <!-- Section Header -->
         <div class="section-header relative z-10 bg-[#f9f0d3] h-12 border border-black flex items-center">
             <h2 class="text-2xl font-bold pl-8" data-scroll>Practice</h2>
@@ -70,26 +83,86 @@
     </section>
 
     <!-- Section Upskill -->
-    <section class="practice h-screen relative z-10 bg-[#ff672b]" data-scroll-section>
+    <section class="practice h-screen sticky top-0 z-10 bg-[#ff672b]" data-scroll-section>
         <!-- Section Header -->
         <div class="section-header relative z-10 bg-[#f9f0d3] h-12 border border-black flex items-center">
             <h2 class="text-2xl font-bold pl-8" data-scroll>Upskill</h2>
         </div>
+
+        <!-- Background Video -->
+        <video id="practice-blob" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 -z-10"
+            autoplay muted loop playsinline preload="auto">
+            <source src="assets/blob_gradient_with_alpha-1.mov">
+            <source src="assets/blob_gradient_with_alpha-1.mp4" type="video/mp4">
+        </video>
+
+        <!-- Main Content -->
+        <div class="flex w-full h-full px-12 pt-12">
+            <div class="w-2/5 flex flex-col justify-center pr-12">
+                <h2 class="text-left text-7xl font-bold text-[#ffedae] mb-6">Upskill</h2>
+                <p class="text-left text-2xl font-medium text-[#ffedae]">
+                    Upskill by nailing true-to-life challenging <br>work situations
+                </p>
+            </div>
+            <div class="w-3/5 flex items-center justify-center p-8">
+                <img src="assets/practice.png" alt="practice image" class="object-contain max-w-full max-h-full">
+            </div>
+        </div>
     </section>
 
     <!-- Section Play -->
-    <section class="practice h-screen relative z-10 bg-[#ff672b]" data-scroll-section>
+    <section class="practice h-screen sticky top-0 z-10 bg-[#92b6bc]" data-scroll-section>
         <!-- Section Header -->
         <div class="section-header relative z-10 bg-[#f9f0d3] h-12 border border-black flex items-center">
             <h2 class="text-2xl font-bold pl-8" data-scroll>Play</h2>
         </div>
+
+        <!-- Background Video -->
+        <video id="practice-blob" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 -z-10"
+            autoplay muted loop playsinline preload="auto">
+            <source src="assets/blob_gradient_with_alpha-1.mov">
+            <source src="assets/blob_gradient_with_alpha-1.mp4" type="video/mp4">
+        </video>
+
+        <!-- Main Content -->
+        <div class="flex w-full h-full px-12 pt-12">
+            <div class="w-2/5 flex flex-col justify-center pr-12">
+                <h2 class="text-left text-7xl font-bold text-[#ffedae] mb-6">Play</h2>
+                <p class="text-left text-2xl font-medium text-[#ffedae]">
+                    Play with your coworker in a multiplayer <br>mode
+                </p>
+            </div>
+            <div class="w-3/5 flex items-center justify-center p-8">
+                <img src="assets/practice.png" alt="practice image" class="object-contain max-w-full max-h-full">
+            </div>
+        </div>
     </section>
 
     <!-- Section Improve -->
-    <section class="practice h-screen relative z-10 bg-[#ff672b]" data-scroll-section>
+    <section class="practice h-screen sticky top-0 z-10 bg-[#ff672b]" data-scroll-section>
         <!-- Section Header -->
         <div class="section-header relative z-10 bg-[#f9f0d3] h-12 border border-black flex items-center">
             <h2 class="text-2xl font-bold pl-8" data-scroll>Improve</h2>
+        </div>
+
+        <!-- Background Video -->
+        <video id="practice-blob" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 -z-10"
+            autoplay muted loop playsinline preload="auto">
+            <source src="assets/blob_gradient_with_alpha-1.mov">
+            <source src="assets/blob_gradient_with_alpha-1.mp4" type="video/mp4">
+        </video>
+
+        <!-- Main Content -->
+        <div class="flex w-full h-full px-12 pt-12">
+            <div class="w-2/5 flex flex-col justify-center pr-12">
+                <h2 class="text-left text-7xl font-bold text-[#ffedae] mb-6">Improve</h2>
+                <p class="text-left text-2xl font-medium text-[#ffedae]">
+                    Improve with AI tailored through an <br>adaptive expereince
+                </p>
+            </div>
+            <div class="w-3/5 flex items-center justify-center p-8">
+                <img src="assets/practice.png" alt="practice image" class="object-contain max-w-full max-h-full">
+            </div>
         </div>
     </section>
 
