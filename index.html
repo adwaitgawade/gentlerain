@@ -146,8 +146,8 @@
                 // Initialize GSAP settings for smooth movement
                 gsap.set(blob, { xPercent: -50, yPercent: -50 });
 
-                const xTo = gsap.quickTo(blob, "x", { duration: 0.6, ease: "power3" });
-                const yTo = gsap.quickTo(blob, "y", { duration: 0.6, ease: "power3" });
+                const xTo = gsap.quickTo(blob, "x", { duration: 5, ease: "power3" });
+                const yTo = gsap.quickTo(blob, "y", { duration: 5, ease: "power3" });
 
                 practiceSection.addEventListener('mousemove', (e) => {
                     const rect = practiceSection.getBoundingClientRect();
@@ -162,10 +162,10 @@
                     const deltaX = relX - centerX;
                     const deltaY = relY - centerY;
 
-                    // Limit movement (bounds) - e.g., max 100px movement from center
-                    const limit = 100;
-                    const moveX = Math.max(Math.min(deltaX * 0.1, limit), -limit);
-                    const moveY = Math.max(Math.min(deltaY * 0.1, limit), -limit);
+                    // Limit movement (bounds) - increased for more flexibility
+                    const limit = 300;
+                    const moveX = Math.max(Math.min(deltaX * 0.3, limit), -limit);
+                    const moveY = Math.max(Math.min(deltaY * 0.3, limit), -limit);
 
                     xTo(moveX);
                     yTo(moveY);
