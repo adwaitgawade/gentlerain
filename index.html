@@ -139,7 +139,7 @@
     </section>
 
     <!-- Section Improve -->
-    <section class="practice h-screen sticky top-0 z-10 bg-[#ff672b]" data-scroll-section>
+    <section class="practice h-screen sticky z-10 bg-[#ff672b]" data-scroll-section>
         <!-- Section Header -->
         <div class="section-header relative z-10 bg-[#f9f0d3] h-12 border border-black flex items-center">
             <h2 class="text-2xl font-bold pl-8" data-scroll>Improve</h2>
@@ -164,6 +164,55 @@
                 <img src="assets/improve.png" alt="practice image" class="object-contain max-w-full max-h-full">
             </div>
         </div>
+    </section>
+
+    <!-- Section Tags -->
+    <section id="tags" class="flex z-20 h-screen relative bg-[#92b6bc]">
+        <div class="flex w-full items-center justify-center">
+            <div id="practice-your-header" class="w-1/2 pl-10"></div>
+            <div class="h-3/5 w-1/2 relative overflow-hidden flex items-center justify-center">
+                <div
+                    class="absolute top-[10%] left-[20%] transform -rotate-12 bg-[#fff0b3] hover:bg-[#ff672b] px-4 py-2 text-black font-bold text-4xl shadow-lg rounded-sm">
+                    innovation</div>
+                <div
+                    class="absolute top-[15%] left-[40%] transform rotate-6 bg-[#333] hover:bg-[#ff672b] px-4 py-2 text-yellow-100 hover:text-[#2c2213] font-bold text-4xl shadow-lg rounded-sm">
+                    passion</div>
+                <div
+                    class="absolute top-[20%] left-[60%] transform -rotate-6 bg-[#fff0b3] hover:bg-[#ff672b] px-4 py-2 text-black font-bold text-4xl shadow-lg rounded-sm">
+                    finance</div>
+                <div
+                    class="absolute top-[30%] left-[15%] transform rotate-3 bg-[#333] hover:bg-[#ff672b] px-4 py-2 text-yellow-100 hover:text-[#2c2213] font-bold text-4xl shadow-lg rounded-sm">
+                    leadership</div>
+                <div
+                    class="absolute top-[35%] left-[50%] transform -rotate-9 bg-[#fff0b3] hover:bg-[#ff672b] px-4 py-2 text-black font-bold text-4xl shadow-lg rounded-sm">
+                    recruiting</div>
+                <div
+                    class="absolute top-[40%] left-[70%] transform rotate-12 bg-[#333] hover:bg-[#ff672b] px-4 py-2 text-yellow-100 hover:text-[#2c2213] font-bold text-4xl shadow-lg rounded-sm">
+                    sales</div>
+                <div
+                    class="absolute top-[45%] left-[10%] transform -rotate-15 bg-[#fff0b3] hover:bg-[#ff672b] px-4 py-2 text-black font-bold text-4xl shadow-lg rounded-sm">
+                    marketing</div>
+                <div
+                    class="absolute top-[55%] left-[30%] transform rotate-6 bg-[#333] hover:bg-[#ff672b] px-4 py-2 text-yellow-100 hover:text-[#333] font-bold text-4xl shadow-lg rounded-sm">
+                    DEI</div>
+                <div
+                    class="absolute top-[50%] left-[35%] transform -rotate-3 bg-[#fff0b3] hover:bg-[#ff672b] px-4 py-2 text-black font-bold text-4xl shadow-lg rounded-sm">
+                    project management</div>
+                <div
+                    class="absolute top-[65%] left-[55%] transform rotate-9 bg-[#fff0b3] hover:bg-[#ff672b] px-4 py-2 text-black font-bold text-4xl shadow-lg rounded-sm">
+                    product launch</div>
+            </div>
+        </div>
+
+        <script>
+            // Load the practice-your-header component
+            fetch('practice-your-header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('practice-your-header').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading component:', error));
+        </script>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
@@ -249,6 +298,9 @@
                 });
             }
         });
+    </script>
+    <script>
+
     </script>
 </body>
 
